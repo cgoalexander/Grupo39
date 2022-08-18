@@ -9,18 +9,17 @@ package com.mycompany.retobiblioteca;
  * @author hp
  */
 public class libroDigital extends Libro{
-    
+
     private double espacioEnDisco;
     private double datosTransferidos;
     private String formato;
 
-    public libroDigital(double espacioEnDisco, double datosTransferidos, String formato, String titulo, String nombreAutor, String apellidosAutor, String fechaPublicacion, int numeroPaginas, int prestamos) {
+    public libroDigital(double espacioEnDisco, String formato, String titulo, String nombreAutor, String apellidosAutor, String fechaPublicacion, int numeroPaginas, int prestamos) {
         super(titulo, nombreAutor, apellidosAutor, fechaPublicacion, numeroPaginas, prestamos);
         this.espacioEnDisco = espacioEnDisco;
         this.datosTransferidos = (espacioEnDisco*prestamos);
         this.formato = formato;
     }
-
     @Override
     public void prestar(){
         //AGREGUE LO QUE FALTA DEL MÉTODO prestar()
@@ -29,9 +28,7 @@ public class libroDigital extends Libro{
         //A CONTINUACIÓN
         double datosSubidos = getDatosTransferidos();
         datosSubidos =  datosSubidos + espacioEnDisco;
-        setDatosTransferidos(datosSubidos);
-        
-        
+        setDatosTransferidos(datosSubidos);       
     }
 
     public double getEspacioEnDisco() {
@@ -56,10 +53,5 @@ public class libroDigital extends Libro{
 
     public void setFormato(String formato) {
         this.formato = formato;
-    }
-    
-    
-    
-    
-    
+    }  
 }

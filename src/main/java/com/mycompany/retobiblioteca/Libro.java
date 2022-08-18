@@ -81,9 +81,5 @@ public class Libro {
 
     public void setPrestamos(int prestamos) {
         this.prestamos = prestamos;
-    }
-    
-    
-    
-    
+    }   
 }
